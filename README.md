@@ -1,0 +1,2 @@
+# 30daymindset
+mindset challenge
