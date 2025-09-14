@@ -1,3 +1,5 @@
+
+<<<<<<< HEAD
 # Studiova - Free Bootstrap Business Template
 #### Preview
 
@@ -24,3 +26,7 @@ Design and code is completely written by WrapPixel design and development team.
  - Licensed cover under [MIT] 
  - Distributed by [ThemeWagon](https://themewagon.com)
 
+=======
+# 30daymindset
+mindset challenge
+>>>>>>> 293026c39982d3dd3aa276b162cb5aed1b171cdc
