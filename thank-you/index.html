@@ -13,7 +13,7 @@
 
 <body>
 
-  <!-- Header -->
+ <!-- Header -->
   <header class="header border-4 border-primary border-top position-fixed start-0 top-0 w-100">
     <div class="container">
       <div class="header-wrapper d-flex align-items-center justify-content-between">
@@ -25,76 +25,7 @@
             <img src="../assets/images/logos/logo-dark.png" alt="logo" class="img-fluid" style="width: 150px">
           </a>
         </div>
-        <div class="d-flex align-items-center gap-4">
 
-          <div class="btn-group">
-            <button
-              class="btn btn-secondary toggle-menu round-45 p-2 d-flex align-items-center justify-content-center bg-white rounded-circle"
-              type="button" data-bs-toggle="dropdown" data-bs-auto-close="true" aria-expanded="false">
-              <iconify-icon icon="solar:hamburger-menu-line-duotone" class="menu-icon fs-8 text-dark"></iconify-icon>
-            </button>
-            <ul class="dropdown-menu dropdown-menu-end p-4">
-              <div class="d-flex flex-column gap-6">
-                <div class="hstack justify-content-between border-bottom pb-6">
-                  <p class="mb-0 fs-5 text-dark">Menu</p>
-                  <button type="button" class="btn-close opacity-75" aria-label="Close"></button>
-                </div>
-                <div class="d-flex flex-column gap-3">
-                  <ul class="header-menu list-unstyled mb-0 d-flex flex-column gap-2">
-                    <li class="header-item">
-                      <a href="index.html" class="header-link hstack gap-2 fs-7 fw-bold text-dark"><img
-                          src="../assets/images/svgs/secondary-leaf.svg" alt="" width="20" height="20"
-                          class="img-fluid animate-spin">Home</a>
-                    </li>
-                    <li class="header-item">
-                      <a href="about-us.html" class="header-link hstack gap-2 fs-7 fw-bold text-dark"><img
-                          src="../assets/images/svgs/secondary-leaf.svg" alt="" width="20" height="20"
-                          class="img-fluid animate-spin">About</a>
-                    </li>
-                    <li class="header-item">
-                      <a href="projects.html" class="header-link hstack gap-2 fs-7 fw-bold text-dark"><img
-                          src="../assets/images/svgs/secondary-leaf.svg" alt="" width="20" height="20"
-                          class="img-fluid animate-spin">Projects</a>
-                    </li>
-                    <li class="header-item">
-                      <a href="blog.html" aria-current="true"
-                        class="header-link active hstack gap-2 fs-7 fw-bold text-dark"><img
-                          src="../assets/images/svgs/secondary-leaf.svg" alt="" width="20" height="20"
-                          class="img-fluid animate-spin">Blog</a>
-                    </li>
-                    <li class="header-item">
-                      <a href="index.html" class="header-link hstack gap-2 fs-7 fw-bold text-dark"><img
-                          src="../assets/images/svgs/secondary-leaf.svg" alt="" width="20" height="20"
-                          class="img-fluid animate-spin">Services</a>
-                    </li>
-                    <li class="header-item">
-                      <a href="contact.html" class="header-link hstack gap-2 fs-7 fw-bold text-dark"><img
-                          src="../assets/images/svgs/secondary-leaf.svg" alt="" width="20" height="20"
-                          class="img-fluid animate-spin">Contact</a>
-                    </li>
-                    <li class="header-item">
-                      <a href="index.html" class="header-link hstack gap-2 fs-7 fw-bold text-dark"><img
-                          src="../assets/images/svgs/secondary-leaf.svg" alt="" width="20" height="20"
-                          class="img-fluid animate-spin">Docs</a>
-                    </li>
-                  </ul>
-                  <div class="hstack gap-3">
-                    <a href="sign-in.html"
-                      class="btn btn-outline-light fs-6 bg-white px-3 py-2 text-dark w-50 hstack justify-content-center">Sign
-                      In</a>
-                    <a href="sign-up.html"
-                      class="btn btn-dark text-white fs-6 bg-dark px-3 py-2 w-50 hstack justify-content-center">Sign
-                      Up</a>
-                  </div>
-                </div>
-                <div>
-                  <a class="text-dark" href="tel:+1-212-456-7890">+1-212-456-7890</a>
-                  <a class="fs-8 text-dark fw-bold" href="mailto:info@wrappixel.com">info@wrappixel.com</a>
-                </div>
-              </div>
-            </ul>
-          </div>
-        </div>
       </div>
     </div>
   </header>
@@ -107,8 +38,8 @@
     style="background-repeat: no-repeat;
            background-size: 100% auto;   /* full width, keep aspect ratio */
            background-position: top center;
-           background-color: #1F2A2E;
-           height: 23vh;"> <!-- Adjust this to match image height -->
+           background-color: #42565e;
+           height: 20vh;"> <!-- Adjust this to match image height -->
            
   <div class="container mt-3">
     <div class="d-flex flex-column gap-4 position-relative z-1">
@@ -122,108 +53,114 @@
   <div class="container">
     <div class="row align-items-center">
       
- 
-      <!-- Center This -->
-<div class="d-flex align-items-center justify-content-center gap-3 py-2" 
+<!-- Center This -->
+<div class="d-flex align-items-center justify-content-center gap-3 py-2 mobile-margin-fix"
      data-aos="fade-right" data-aos-delay="100" data-aos-duration="1000" style="margin-top: -90px;">
   <span class="round-36 flex-shrink-0 text-dark rounded-circle bg-primary hstack justify-content-center fw-medium">30</span>
   <hr class="border-line bg-white" style="width: 50px;">
   <span class="badge text-dark bg-white">Thank You For Joining The Challenge!</span>
 </div>
-        
-<div class="text-center">
+
+<div class="text-center mt-4 mt-lg-0 mobile-margin-fix">
   <video controls style="max-width: 950px; width: 100%;">
     <source src="../assets/images/backgrounds/Thank_You_Webinar.mp4" type="video/mp4">
     Your browser does not support the video tag.
   </video>
 </div>
 
+<style>
+  @media (max-width: 991.98px) {
+    .mobile-margin-fix {
+      margin-top: 20px !important; /* adjust how far down you want it */
+    }
+  }
+</style>
+
     </div>
   </div>
 </section>
 
 
-    <!-- Testimonial Section -->
+<!-- Instruction Section -->
 <section class="testimonial py-5 py-lg-11 py-xl-12 bg-white">
   <div class="container">
-    <div class="d-flex flex-column gap-5 gap-xl-11">
-      <div class="row gap-7 gap-xl-0">
-        <div class="col-xl-4 col-xxl-4">
-          <div class="d-flex align-items-center gap-7 py-2" data-aos="fade-right" data-aos-delay="100"
-            data-aos-duration="1000">
-            <span class="badge" style="background-color:#bef472; color:white;">30 Day Challenge</span>
-            <hr class="border-line bg-white">
-        
-          </div>
-        </div>
+    <div class="d-flex flex-column gap-5">
 
-        <div class="col-xl-8 col-xxl-7">
-          <div class="row">
-            <div class="col-xxl-8">
-              <div class="d-flex flex-column gap-6" data-aos="fade-up" data-aos-delay="100"
-                data-aos-duration="1000">
-      
-<span class="badge text" style="background: #007bff;"> Next Steps: it will take 5 mins</span>
-
-<div style="margin-top:20px;">
-  <div style="display:flex; align-items:center; margin-bottom:10px;">
-    <span style="display:inline-block; background:#007bff; color:white; border-radius:50%; width:28px; height:28px; text-align:center; line-height:28px; font-weight:bold; margin-right:10px;">1</span>
-    <h5 class="mb-0">Watch the full video above!</h5>
-  </div>
-  <div style="display:flex; align-items:center; margin-bottom:10px;">
-    <span style="display:inline-block; background:#007bff; color:white; border-radius:50%; width:28px; height:28px; text-align:center; line-height:28px; font-weight:bold; margin-right:10px;">2</span>
-    <h5 class="mb-0">Join the Facebook group: <strong>The Development Club</strong> (link is below)</h5>
-  </div>
-  
-  <div style="display:flex; align-items:center; margin-bottom:10px;">
-    <span style="display:inline-block; background:#007bff; color:white; border-radius:50%; width:28px; height:28px; text-align:center; line-height:28px; font-weight:bold; margin-right:10px;">3</span>
-    <h5 class="mb-0">Select a short-term goal (something you can complete within 4 weeks to 5 months)</h5>
-  </div>
-  
-  <div style="display:flex; align-items:center; margin-bottom:10px;">
-    <span style="display:inline-block; background:#007bff; color:white; border-radius:50%; width:28px; height:28px; text-align:center; line-height:28px; font-weight:bold; margin-right:10px;">4</span>
-    <h5 class="mb-0">Check your email for details and confirmation about joining this Challenge</h5>
-  </div>
-  
-  <div style="display:flex; align-items:center; margin-bottom:10px;">
-    <span style="display:inline-block; background:#007bff; color:white; border-radius:50%; width:28px; height:28px; text-align:center; line-height:28px; font-weight:bold; margin-right:10px;">5</span>
-    <h5 class="mb-0">
-  Subscribe to the 
-  <a href="https://open.spotify.com/show/2UplyIzjOMqnoXi3S3cEq4" target="_blank" style="text-decoration:underline; color:#007bff;">
-    Mindset Matters
-  </a> 
-  podcast (optional)
-</h5>
-  </div>
-</div>
-              </div>
-            </div>
-          </div>
-        </div>
+      <!-- Badge on top, centered -->
+      <div class="d-flex justify-content-center mb-4" data-aos="fade-right" data-aos-delay="100" data-aos-duration="1000">
+        <span class="badge px-3 py-2" style="background-color:#bef472; color:white;">30 Day Challenge</span>
       </div>
 
+      <!-- Next Steps Badge -->
+      <div class="d-flex justify-content-center mb-3">
+        <span class="badge px-3 py-2" style="background: #007bff; color:white;">Next Steps: it will take 5 mins</span>
+      </div>
+
+      <!-- Steps -->
+      <div class="d-flex flex-column gap-3" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">
+
+        <!-- Step 1 -->
+        <div class="d-flex align-items-start gap-3">
+          <span class="rounded-circle d-flex justify-content-center align-items-center text-white fw-bold flex-shrink-0" 
+                style="background:#007bff; width:28px; height:28px;">1</span>
+          <h5 class="mb-0">Watch the full video above!</h5>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="d-flex align-items-start gap-3">
+          <span class="rounded-circle d-flex justify-content-center align-items-center text-white fw-bold flex-shrink-0" 
+                style="background:#007bff; width:28px; height:28px;">2</span>
+          <h5 class="mb-0">Join the Facebook group: <strong>The Development Club</strong> (link is below)</h5>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="d-flex align-items-start gap-3">
+          <span class="rounded-circle d-flex justify-content-center align-items-center text-white fw-bold flex-shrink-0" 
+                style="background:#007bff; width:28px; height:28px;">3</span>
+          <h5 class="mb-0">Select a short-term goal (something you can complete within 4 weeks to 5 months)</h5>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="d-flex align-items-start gap-3">
+          <span class="rounded-circle d-flex justify-content-center align-items-center text-white fw-bold flex-shrink-0" 
+                style="background:#007bff; width:28px; height:28px;">4</span>
+          <h5 class="mb-0">Check your email for details and confirmation about joining this Challenge</h5>
+        </div>
+
+        <!-- Step 5 -->
+        <div class="d-flex align-items-start gap-3">
+          <span class="rounded-circle d-flex justify-content-center align-items-center text-white fw-bold flex-shrink-0" 
+                style="background:#007bff; width:28px; height:28px;">5</span>
+          <h5 class="mb-0">
+            Subscribe to the 
+            <a href="https://open.spotify.com/show/2UplyIzjOMqnoXi3S3cEq4" target="_blank" style="text-decoration:underline; color:#007bff;">
+              Mindset Matters
+            </a> 
+            podcast (optional)
+          </h5>
+        </div>
 
       </div>
     </div>
   </div>
 </section>
-
-
 
 
 
 <footer class="footer bg-dark py-5 py-lg-11 py-xl-12">
 
   <!-- Big Join Button -->
-<a href="https://www.facebook.com/groups/thedevelopmentclubofficial" class="btn border border-white border-opacity-25" data-aos="fade-up">
- 
-    <span class="btn-text">I Want to Join The Challenge Now!</span>
+  <a href="https://www.facebook.com/groups/thedevelopmentclubofficial" 
+     class="btn border border-white border-opacity-25 d-block mx-auto mb-4"
+     data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000"
+     style="max-width: 90%; position: relative; top: -20px; background-color: gray;">
+    <span class="btn-text">Access The Facebook Group!</span>
     <iconify-icon icon="lucide:arrow-up-right"
       class="btn-icon bg-white text-dark round-52 rounded-circle hstack justify-content-center fs-7 shadow-sm"></iconify-icon>
   </a>
 
   <div class="container">
-    <div class="row gy-5">
+    <div class="row gy-5 align-items-center justify-content-between">
 
       <!-- Left Column -->
       <div class="col-12 col-xl-5">
@@ -232,11 +169,11 @@
             It's worth it.<span style="color: hsl(81, 67%, 70%);">You're worthy of it.</span> And it's possible for you.
           </h2>
           <div class="d-flex flex-column gap-2">
-            <a href="https://www.wrappixel.com/" target="_blank" class="link-hover hstack gap-2 text-white fs-5 flex-wrap">
+            <a target="_blank" class="hstack gap-2 text-white fs-5 flex-wrap">
               <iconify-icon icon="lucide:arrow-up-right" class="fs-7 text-primary"></iconify-icon>
               Join from anywhere in the world.
             </a>
-            <a href="https://maps.app.goo.gl/hpDp81fqzGt5y4bC8" target="_blank" class="link-hover hstack gap-2 text-white fs-5 flex-wrap">
+            <a target="_blank" class="hstack gap-2 text-white fs-5 flex-wrap">
               <iconify-icon icon="lucide:map-pin" class="fs-7 text-primary"></iconify-icon>
               Halifax, N.S.
             </a>
@@ -244,12 +181,9 @@
         </div>
       </div>
 
-      <!-- Spacer Column (optional for layout) -->
-      <div class="col-12 col-md-4 col-xl-3 d-flex justify-content-center justify-content-xl-end align-items-center"></div>
-
       <!-- Right Column -->
-      <div class="col-12 col-md-4 col-xl-3 text-center text-md-start">
-        <img src="assets/images/logos/logo-white.png" alt="30-Day Mindset Challenge Logo" style="max-width: 150px; width: 80%;">
+      <div class="col-12 col-xl-3 text-center text-xl-end">
+        <img src="../assets/images/logos/logo-white.png" alt="30-Day Mindset Challenge Logo" style="max-width: 120px; width: 80%;">
         <p class="mb-0 text-white text-opacity-70 mt-3">
           Brought to you by 
           <a class="text-white" href="https://www.portboostapps.com" target="_blank">Portboost Apps</a>
@@ -262,7 +196,6 @@
   <p class="mb-0 text-white text-opacity-70 text-center mt-4">© 30-Day Challenge copyright 2025</p>  
 
 </footer>
-
 
   <div class="get-template hstack gap-2">
     <button class="btn bg-primary p-2 round-52 rounded-circle hstack justify-content-center flex-shrink-0"
