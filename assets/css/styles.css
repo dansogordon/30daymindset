@@ -204,8 +204,107 @@ body {
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #ffffff;
+    line-height: 1.5;
+}
 
+/* HERO SECTION */
+.hero {
+    text-align: center;
+    padding: 60px 20px;
+}
 
+.hero-title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.hero-price {
+    font-size: 2.5rem;
+    margin-top: 20px;
+}
+
+.old-price {
+    text-decoration: line-through;
+    color: #555;
+}
+
+.new-price {
+    color: red;
+    font-weight: bold;
+}
+
+/* TWO COLUMN LAYOUT */
+.two-column {
+    display: flex;
+    gap: 40px;
+    padding: 50px 20px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.left, .right {
+    flex: 1;
+}
+
+/* VIDEO */
+.video-wrapper iframe {
+    width: 100%;
+    height: 315px;
+    border-radius: 8px;
+}
+
+/* OFFER BOX */
+.offer-box {
+    background: #D60000;
+    color: white;
+    padding: 40px;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.offer-box h3 {
+    margin-top: 0;
+}
+
+.cta-button {
+    display: inline-block;
+    background: white;
+    color: #D60000;
+    padding: 12px 20px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+/* BOTTOM SECTION */
+.bottom-section {
+    align-items: center;
+}
+
+.phone-img {
+    width: 100%;
+    max-width: 350px;
+    display: block;
+    margin: auto;
+}
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 900px) {
+    .two-column {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .video-wrapper iframe {
+        height: 250px;
+    }
+}
 
 .team-img {
   width: 500px; /* adjust width here */
