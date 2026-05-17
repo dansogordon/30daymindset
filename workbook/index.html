@@ -1,0 +1,1251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>30 Day Mindset Challenge Workbook — Dan Gordon</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:wght@300;400;500&display=swap');
+
+:root {
+  --black: #0a0a0a;
+  --gold: #c9a84c;
+  --gold-light: #e8c97a;
+  --cream: #f5f0e8;
+  --warm-white: #faf8f4;
+  --charcoal: #2a2a2a;
+  --mid-gray: #888;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--warm-white);
+  color: var(--charcoal);
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+/* COVER PAGE */
+.cover {
+  min-height: 100vh;
+  background: var(--black);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 60px 40px;
+  position: relative;
+  overflow: hidden;
+}
+
+
+.cover-number {
+  font-family: 'Playfair Display', serif;
+  font-size: 140px;
+  font-weight: 900;
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(201,168,76,0.3);
+  line-height: 1;
+  letter-spacing: -4px;
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+}
+
+.cover-content {
+  position: relative;
+  z-index: 2;
+}
+
+.cover-eyebrow {
+  font-size: 11px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 24px;
+}
+
+.cover-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(48px, 8vw, 88px);
+  font-weight: 900;
+  color: var(--cream);
+  line-height: 1;
+  margin-bottom: 8px;
+}
+
+.cover-title span {
+  color: var(--gold);
+  font-style: italic;
+}
+
+.cover-subtitle {
+  font-size: 13px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: rgba(245,240,232,0.5);
+  margin-top: 20px;
+  margin-bottom: 48px;
+}
+
+.cover-divider {
+  width: 60px;
+  height: 1px;
+  background: var(--gold);
+  margin: 0 auto 48px;
+}
+
+.cover-tagline {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: 20px;
+  color: rgba(245,240,232,0.7);
+  max-width: 500px;
+  line-height: 1.6;
+  margin-bottom: 48px;
+}
+
+.cover-author {
+  font-size: 12px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+/* HOW TO USE */
+.how-to-use {
+  background: var(--cream);
+  padding: 80px 60px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.section-eyebrow {
+  font-size: 10px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 16px;
+}
+
+.section-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 42px;
+  font-weight: 700;
+  color: var(--black);
+  margin-bottom: 32px;
+  line-height: 1.2;
+}
+
+.intro-text {
+  font-size: 16px;
+  line-height: 1.9;
+  color: var(--charcoal);
+  max-width: 680px;
+  margin-bottom: 48px;
+}
+
+.how-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  margin-top: 40px;
+}
+
+.how-item {
+  padding: 32px 24px;
+  background: var(--warm-white);
+  border-top: 3px solid var(--gold);
+}
+
+.how-number {
+  font-family: 'Playfair Display', serif;
+  font-size: 48px;
+  font-weight: 900;
+  color: rgba(201,168,76,0.2);
+  line-height: 1;
+  margin-bottom: 16px;
+}
+
+.how-item h3 {
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+  color: var(--black);
+}
+
+.how-item p {
+  font-size: 13px;
+  color: var(--mid-gray);
+  line-height: 1.7;
+}
+
+/* WEEK HEADER */
+.week-header {
+  background: var(--black);
+  padding: 60px;
+  max-width: 900px;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+}
+
+.week-header::after {
+  content: attr(data-week);
+  font-family: 'Playfair Display', serif;
+  font-size: 200px;
+  font-weight: 900;
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(201,168,76,0.1);
+  position: absolute;
+  right: -20px;
+  top: 50%;
+  transform: translateY(-50%);
+  line-height: 1;
+  pointer-events: none;
+}
+
+.week-tag {
+  font-size: 10px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 16px;
+}
+
+.week-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 48px;
+  font-weight: 900;
+  color: var(--cream);
+  line-height: 1.1;
+  max-width: 500px;
+  margin-bottom: 24px;
+}
+
+.week-desc {
+  font-size: 15px;
+  color: rgba(245,240,232,0.6);
+  max-width: 500px;
+  line-height: 1.8;
+}
+
+/* DAY CARD */
+.day-card {
+  max-width: 900px;
+  margin: 0 auto;
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+  padding: 56px 60px;
+  background: var(--warm-white);
+}
+
+.day-card:nth-child(even) {
+  background: var(--cream);
+}
+
+.day-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 32px;
+  margin-bottom: 40px;
+}
+
+.day-number-block {
+  flex-shrink: 0;
+  width: 80px;
+  height: 80px;
+  background: var(--black);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.day-label {
+  font-size: 8px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+.day-num {
+  font-family: 'Playfair Display', serif;
+  font-size: 32px;
+  font-weight: 900;
+  color: var(--cream);
+  line-height: 1;
+}
+
+.day-title-block h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--black);
+  line-height: 1.2;
+  margin-bottom: 8px;
+}
+
+.day-title-block .day-theme {
+  font-size: 11px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+.day-concept {
+  margin-bottom: 32px;
+}
+
+.block-label {
+  font-size: 9px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--mid-gray);
+  margin-bottom: 10px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+.day-concept p {
+  font-size: 15px;
+  line-height: 1.9;
+  color: var(--charcoal);
+}
+
+.day-exercise {
+  background: var(--black);
+  padding: 32px;
+  margin-bottom: 32px;
+}
+
+.day-exercise .block-label {
+  color: var(--gold);
+  border-bottom-color: rgba(201,168,76,0.2);
+}
+
+.day-exercise p {
+  font-size: 15px;
+  line-height: 1.9;
+  color: rgba(245,240,232,0.85);
+}
+
+.day-reflection {
+  padding: 32px;
+  border: 1px solid rgba(201,168,76,0.3);
+  background: rgba(201,168,76,0.03);
+}
+
+.day-reflection .block-label {
+  color: var(--gold);
+}
+
+.day-reflection p {
+  font-size: 15px;
+  line-height: 1.9;
+  color: var(--charcoal);
+  font-style: italic;
+  margin-bottom: 20px;
+}
+
+.write-lines {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.write-line {
+  height: 1px;
+  background: rgba(0,0,0,0.12);
+}
+
+.page-break {
+  height: 8px;
+  background: var(--gold);
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.back-cover {
+  background: var(--black);
+  min-height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 80px 40px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.back-cover-content h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 48px;
+  font-weight: 900;
+  color: var(--cream);
+  margin-bottom: 24px;
+  line-height: 1.1;
+}
+
+.back-cover-content h2 span {
+  color: var(--gold);
+  font-style: italic;
+}
+
+.back-cover-content p {
+  font-size: 15px;
+  color: rgba(245,240,232,0.6);
+  max-width: 500px;
+  line-height: 1.8;
+  margin-bottom: 40px;
+}
+
+.back-cover-url {
+  font-size: 12px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+@media print {
+  .day-card {
+    page-break-inside: avoid;
+  }
+
+  .week-header {
+    page-break-before: always;
+  }
+}
+</style>
+</head>
+<body>
+
+<!-- COVER -->
+
+<div class="cover">
+  <div class="cover-number">30</div>
+  <div class="cover-content">
+    <div class="cover-eyebrow">Dan Gordon · Mindset Matters</div>
+    <h1 class="cover-title">30 Day<br><span>Mindset</span><br>Challenge</h1>
+    <div class="cover-subtitle">Daily Workbook &amp; Journal</div>
+    <div class="cover-divider"></div>
+    <p class="cover-tagline">"YOU are the gift you've been waiting for this entire time."</p>
+    <div class="cover-author">30daymindset.com</div>
+  </div>
+</div>
+
+<!-- HOW TO USE -->
+
+<div class="how-to-use">
+  <div class="section-eyebrow">Before You Begin</div>
+  <h2 class="section-title">How to Use This Workbook</h2>
+  <p class="intro-text">This workbook is your daily companion for the next 30 days. Each page has three parts: a concept to understand, an exercise to do, and a reflection question to write. Don't skip the writing. The writing is where the transformation happens. Give yourself 10–15 minutes each morning. Show up every day. That's the whole deal.</p>
+  <p class="intro-text">This is not guesswork. It's science — biology, quantum physics, energy. The mind is stronger than you realize. The placebo effect is real. The nocebo effect is real. Now imagine you could harness that power <em>intentionally</em>. You can. This is how.</p>
+
+  <div class="how-grid">
+    <div class="how-item">
+      <div class="how-number">01</div>
+      <h3>Read the Concept</h3>
+      <p>Understand the principle for the day. Let it land. Don't rush past it — this is your foundation.</p>
+    </div>
+    <div class="how-item">
+      <div class="how-number">02</div>
+      <h3>Do the Exercise</h3>
+      <p>This is where the work happens. Do it fully. Half-effort gets half-results. Commit to the rep.</p>
+    </div>
+    <div class="how-item">
+      <div class="how-number">03</div>
+      <h3>Write Your Reflection</h3>
+      <p>Answer the question honestly. No one's grading you. This is between you and the person you're becoming.</p>
+    </div>
+  </div>
+</div>
+
+<div class="page-break"></div>
+
+<!-- WEEK 1 -->
+
+<div class="week-header" data-week="1">
+  <div class="week-tag">Week One · Days 1–7</div>
+  <h2 class="week-title">Foundation</h2>
+  <p class="week-desc">Before you can build anything, you need to know what's in the way. Week 1 is about awareness — seeing your current programming clearly so you can begin to change it.</p>
+</div>
+
+<!-- DAY 1 -->
+
+<div class="day-card">
+  <div class="day-header">
+    <div class="day-number-block">
+      <span class="day-label">Day</span>
+      <span class="day-num">01</span>
+    </div>
+    <div class="day-title-block">
+      <div class="day-theme">Foundation</div>
+      <h2>You Are the Gift</h2>
+    </div>
+  </div>
+
+  <div class="day-concept">
+    <div class="block-label">Today's Concept</div>
+    <p>Everything starts with one truth: you are not broken. You are not behind. You are not lacking. You have been programmed — by your environment, your experiences, the people around you — to believe stories about yourself that simply aren't true. The work of these 30 days is not to find something outside of you. It's to uncover what's already there. You are the gift. Always have been.</p>
+  </div>
+
+  <div class="day-exercise">
+    <div class="block-label">Today's Exercise</div>
+    <p>Sit quietly for 5 minutes. Close your eyes. Ask yourself: what is the one belief I carry about myself that has held me back the most? Don't judge it. Just see it. Name it. Write it down below. This is the first thing you are going to release over these 30 days.</p>
+  </div>
+
+  <div class="day-reflection">
+    <div class="block-label">Reflection Prompt</div>
+    <p>What would my life look like if I stopped believing that story — starting today?</p>
+    <div class="write-lines">
+      <div class="write-line"></div><div class="write-line"></div><div class="write-line"></div>
+      <div class="write-line"></div><div class="write-line"></div><div class="write-line"></div>
+    </div>
+  </div>
+</div>
+
+<!-- DAY 2 -->
+
+<div class="day-card">
+  <div class="day-header">
+    <div class="day-number-block">
+      <span class="day-label">Day</span>
+      <span class="day-num">02</span>
+    </div>
+    <div class="day-title-block">
+      <div class="day-theme">Foundation</div>
+      <h2>The Stories We Tell Ourselves</h2>
+    </div>
+  </div>
+
+  <div class="day-concept">
+    <div class="block-label">Today's Concept</div>
+    <p>Your brain is a story machine. Every second it is generating a narrative about who you are, what's possible, and what you deserve. Most of these stories were written before you were 10 years old. You didn't write them consciously — they were installed by the world around you. The first step to changing your mindset is recognizing that your current thoughts are not facts. They are just the most repeated stories. And stories can be rewritten.</p>
+  </div>
+
+  <div class="day-exercise">
+    <div class="block-label">Today's Exercise</div>
+    <p>For the next 24 hours, catch yourself every time you think or say something negative about yourself or your situation. Write each one down. No judgment — just awareness. Awareness is the beginning of all change. You cannot change what you cannot see.</p>
+  </div>
+
+  <div class="day-reflection">
+    <div class="block-label">Reflection Prompt</div>
+    <p>Where did this story come from? Who taught it to me — and do they deserve that much power over my life?</p>
+    <div class="write-lines">
+      <div class="write-line"></div><div class="write-line"></div><div class="write-line"></div>
+      <div class="write-line"></div><div class="write-line"></div><div class="write-line"></div>
+    </div>
+  </div>
+</div>
+
+<!-- DAY 3 -->
+
+<div class="day-card">
+  <div class="day-header">
+    <div class="day-number-block">
+      <span class="day-label">Day</span>
+      <span class="day-num">03</span>
+    </div>
+    <div class="day-title-block">
+      <div class="day-theme">Foundation</div>
+      <h2>The Placebo Is Real</h2>
+    </div>
+  </div>
+
+  <div class="day-concept">
+    <div class="block-label">Today's Concept</div>
+    <p>The placebo effect is one of the most documented phenomena in science. People heal from real conditions because they believe they will. The nocebo effect is the opposite — people get sick because they believe they will. Your belief literally changes your biology. This is not metaphor. This is measurable, repeatable science. What you believe about yourself is not just a thought — it is a physical force acting on your body and your reality. Choose your beliefs intentionally.</p>
+  </div>
+
+  <div class="day-exercise">
+    <div class="block-label">Today's Exercise</div>
+    <p>Write down one area of your life where you have been operating with a nocebo belief — something you expect to go wrong, fail, or never change. Now write the exact opposite belief as if it were already true. Read it out loud three times. Feel the resistance. That resistance is the old programming defending itself. That's exactly where you need to work.</p>
+  </div>
+
+  <div class="day-reflection">
+    <div class="block-label">Reflection Prompt</div>
+    <p>If I truly believed my life was working out perfectly — what would I do differently tomorrow?</p>
+    <div class="write-lines">
+      <div class="write-line"></div><div class="write-line"></div><div class="write-line"></div>
+      <div class="write-line"></div><div class="write-line"></div><div class="write-line"></div>
+    </div>
+  </div>
+</div>
+
+<!-- DAY 4 -->
+
+<div class="day-card">
+  <div class="day-header">
+    <div class="day-number-block">
+      <span class="day-label">Day</span>
+      <span class="day-num">04</span>
+    </div>
+    <div class="day-title-block">
+      <div class="day-theme">Foundation</div>
+      <h2>Your One Goal</h2>
+    </div>
+  </div>
+
+  <div class="day-concept">
+    <div class="block-label">Today's Concept</div>
+    <p>One of the biggest reasons people don't achieve their goals is they have too many of them. The mind cannot hold a laser focus on ten things simultaneously. Energy dispersed is energy wasted. For these 30 days, you are going to choose one short-term goal — something achievable in the next 1 to 5 months — and you are going to point every tool in this challenge directly at it. One target. All energy. This is how transformation actually happens.</p>
+  </div>
+
+  <div class="day-exercise">
+    <div class="block-label">Today's Exercise</div>
+    <p>Write your one goal at the top of this page. Make it specific. Not "make more money" — but "close 2 sales per week by the end of this month." Not "get healthy" — but "run 3 times a week for 30 days." Now write WHY this goal matters to you at the deepest level. Not the surface reason. The real reason. Go three layers deep — keep asking "and why does that matter?" until you hit something that makes you feel something.</p>
+  </div>
+
+  <div class="day-reflection">
+    <div class="block-label">Reflection Prompt</div>
+    <p>What version of me achieves this goal — and what does that person do every single day?</p>
+    <div class="write-lines">
+      <div class="write-line"></div><div class="write-line"></div><div class="write-line"></div>
+      <div class="write-line"></div><div class="write-line"></div><div class="write-line"></div>
+    </div>
+  </div>
+</div>
+
+<!-- DAY 5 -->
+
+<div class="day-card">
+  <div class="day-header">
+    <div class="day-number-block">
+      <span class="day-label">Day</span>
+      <span class="day-num">05</span>
+    </div>
+    <div class="day-title-block">
+      <div class="day-theme">Foundation</div>
+      <h2>Visualization: The First Rep</h2>
+    </div>
+  </div>
+
+  <div class="day-concept">
+    <div class="block-label">Today's Concept</div>
+    <p>Elite athletes have known for decades what neuroscience has now confirmed — the brain cannot reliably distinguish between a vividly imagined experience and a real one. When you visualize with full sensory detail, you are firing the same neural pathways as if you were doing the thing. You are literally training your brain. Visualization is not wishful thinking. It is mental rehearsal. Starting today, your morning visualization is non-negotiable. 5 minutes. Every day.</p>
+  </div>
+
+  <div class="day-exercise">
+    <div class="block-label">Today's Exercise</div>
+    <p>Set a timer for 5 minutes. Close your eyes. See yourself having already achieved your Day 4 goal. Don't see the journey — see the destination. Where are you? What does it feel like in your body? What are people saying to you? What are you wearing, doing, thinking? Make it as real as possible. When the timer goes off, write down everything you saw and felt. The more detail, the deeper the programming.</p>
+  </div>
+
+  <div class="day-reflection">
+    <div class="block-label">Reflection Prompt</div>
+    <p>What did I feel during the visualization — and what does that feeling tell me about how badly I actually want this?</p>
+    <div class="write-lines">
+      <div class="write-line"></div><div class="write-line"></div><div class="write-line"></div>
+      <div class="write-line"></div><div class="write-line"></div><div class="write-line"></div>
+    </div>
+  </div>
+</div>
+
+<!-- DAY 6 -->
+
+<div class="day-card">
+  <div class="day-header">
+    <div class="day-number-block">
+      <span class="day-label">Day</span>
+      <span class="day-num">06</span>
+    </div>
+    <div class="day-title-block">
+      <div class="day-theme">Foundation</div>
+      <h2>The Energy You Carry</h2>
+    </div>
+  </div>
+
+  <div class="day-concept">
+    <div class="block-label">Today's Concept</div>
+    <p>You are always broadcasting an energy. People feel it before you say a word. It's in how you walk, how you breathe, how you enter a room. Low vibration energy — doubt, fear, resentment, lack — repels the very things you want. High vibration energy — certainty, gratitude, purpose, love — attracts them. You cannot fake this. You can only genuinely raise it. Gratitude is the fastest elevator to high vibration. It is physiologically impossible to be grateful and anxious at the same time.</p>
+  </div>
+
+  <div class="day-exercise">
+    <div class="block-label">Today's Exercise</div>
+    <p>Write 10 things you are genuinely grateful for right now. Not generic things — specific things. Not "my health" but "the fact that my body showed up for me today when I needed it." Go deep. Feel each one as you write it. Then stand up, take 3 deep breaths, and say out loud: "I am exactly where I need to be." Mean it.</p>
+  </div>
+
+  <div class="day-reflection">
+    <div class="block-label">Reflection Prompt</div>
+    <p>What energy have I been unconsciously broadcasting — and what energy do I choose to carry from today forward?</p>
+    <div class="write-lines">
+      <div class="write-line"></div><div class="write-line"></div><div class="write-line"></div>
+      <div class="write-line"></div><div class="write-line"></div><div class="write-line"></div>
+    </div>
+  </div>
+</div>
+
+<!-- DAY 7 -->
+
+<div class="day-card milestone">
+  <div class="day-header">
+    <div class="day-number-block">
+      <span class="day-label">Day</span>
+      <span class="day-num">07</span>
+    </div>
+    <div class="day-title-block">
+      <div class="day-theme">Week 1 Milestone</div>
+      <h2>Take Stock</h2>
+    </div>
+  </div>
+
+  <div class="day-concept">
+    <div class="block-label">Today's Concept</div>
+    <p>You made it through Week 1. That means something. Most people quit in the first week — not because it's too hard, but because they don't believe change is real for them. You showed up. That belief is already shifting. Today is not a day off — it's a day of integration. You consolidate what you've learned, you measure where you are, and you recommit to the next 23 days with fresh clarity.</p>
+  </div>
+
+  <div class="day-exercise">
+    <div class="block-label">Week 1 Review Exercise</div>
+    <p>Go back through Days 1–6. Read every reflection you wrote. Answer these three questions: What has already started to shift? What belief has been the hardest to let go of? What am I most proud of from this first week? Write your answers in full. Then do your 5-minute visualization of your goal — make it even more vivid than Day 5.</p>
+  </div>
+
+  <div class="day-reflection">
+    <div class="block-label">Reflection Prompt</div>
+    <p>Who am I becoming through this process — and what does that person need from me in Week 2?</p>
+    <div class="write-lines">
+      <div class="write-line"></div><div class="write-line"></div><div class="write-line"></div>
+      <div class="write-line"></div><div class="write-line"></div><div class="write-line"></div>
+    </div>
+  </div>
+</div>
+
+<div class="page-break"></div>
+
+<!-- WEEK 2 -->
+
+<div class="week-header" data-week="2">
+  <div class="week-tag">Week Two · Days 8–14</div>
+  <h2 class="week-title">Reprogramming</h2>
+  <p class="week-desc">Now that you can see your patterns clearly, it's time to actively replace them. Week 2 introduces affirmation layering and goes deeper into the science of how your mind changes. This is where the real work begins.</p>
+</div>
+
+<!-- DAY 8 -->
+
+<div class="day-card">
+  <div class="day-header">
+    <div class="day-number-block"><span class="day-label">Day</span><span class="day-num">08</span></div>
+    <div class="day-title-block"><div class="day-theme">Reprogramming</div><h2>How the Mind Actually Changes</h2></div>
+  </div>
+  <div class="day-concept">
+    <div class="block-label">Today's Concept</div>
+    <p>Neuroplasticity is the brain's ability to rewire itself based on repeated experience. Every time you think a thought, you strengthen a neural pathway. Repeated thoughts become automatic — they fire without effort. This is how habits form, how beliefs calcify, and how transformation works. You are not trying to force yourself to think differently. You are creating new pathways through repetition until the new thought becomes the default. This takes about 21 days of consistent practice. You're on day 8. You're building.</p>
+  </div>
+  <div class="day-exercise">
+    <div class="block-label">Today's Exercise</div>
+    <p>Identify the one limiting belief you named on Day 1. Now write its exact opposite as a present-tense affirmation. Example: "I always fail" becomes "I find a way through every challenge." Write this affirmation 10 times by hand. Speaking it out loud as you write it. Repetition with emotion is what burns new pathways. Do this again tonight before bed.</p>
+  </div>
+  <div class="day-reflection">
+    <div class="block-label">Reflection Prompt</div>
+    <p>What would I need to believe about myself to make my goal feel inevitable rather than possible?</p>
+    <div class="write-lines"><div class="write-line"></div><div class="write-line"></div><div class="write-line"></div><div class="write-line"></div><div class="write-line"></div><div class="write-line"></div></div>
+  </div>
+</div>
+
+<!-- DAY 9 -->
+
+<div class="day-card">
+  <div class="day-header">
+    <div class="day-number-block"><span class="day-label">Day</span><span class="day-num">09</span></div>
+    <div class="day-title-block"><div class="day-theme">Reprogramming</div><h2>Identity Before Action</h2></div>
+  </div>
+  <div class="day-concept">
+    <div class="block-label">Today's Concept</div>
+    <p>Most people try to change their behavior first and hope their identity follows. It rarely works. Real change flows in the opposite direction — you shift your identity first, and the actions become natural expressions of who you now are. Don't say "I'm trying to be more disciplined." Say "I am a disciplined person." Don't say "I'm working on being more confident." Say "I am confident." The brain will work to make reality consistent with identity. Use that against your old self.</p>
+  </div>
+  <div class="day-exercise">
+    <div class="block-label">Today's Exercise</div>
+    <p>Write 5 identity statements that describe the person who has already achieved your goal. Start each one with "I am." Make them bold. Make them feel slightly uncomfortable — that discomfort is the gap between who you are and who you're becoming. Read them every morning this week as part of your visualization practice.</p>
+  </div>
+  <div class="day-reflection">
+    <div class="block-label">Reflection Prompt</div>
+    <p>What would the person I described above do today that I haven't been doing?</p>
+    <div class="write-lines"><div class="write-line"></div><div class="write-line"></div><div class="write-line"></div><div class="write-line"></div><div class="write-line"></div><div class="write-line"></div></div>
+  </div>
+</div>
+
+<!-- DAY 10 -->
+
+<div class="day-card">
+  <div class="day-header">
+    <div class="day-number-block"><span class="day-label">Day</span><span class="day-num">10</span></div>
+    <div class="day-title-block"><div class="day-theme">Reprogramming</div><h2>The People Around You</h2></div>
+  </div>
+  <div class="day-concept">
+    <div class="block-label">Today's Concept</div>
+    <p>You are the average of the five people you spend the most time with. This is not motivational poster fluff — it is documented sociological research. Your beliefs, your income, your health, your ambitions are profoundly shaped by your closest circle. Not because people are inherently good or bad, but because energy is contagious. Mediocrity is contagious. Greatness is contagious. Take an honest look at your circle. Some people belong in your story. Others belong in your past.</p>
+  </div>
+  <div class="day-exercise">
+    <div class="block-label">Today's Exercise</div>
+    <p>List the five people you spend the most time with. For each one, honestly answer: Does this person lift my energy or drain it? Do they believe in possibility or limitations? Are they building something or complaining about something? This is not about cutting people off — it's about being honest about influence. Then ask: who do I need to add to my circle?</p>
+  </div>
+  <div class="day-reflection">
+    <div class="block-label">Reflection Prompt</div>
+    <p>Who in my life has been unconsciously programming me toward smallness — and how do I protect my energy without losing compassion for them?</p>
+    <div class="write-lines"><div class="write-line"></div><div class="write-line"></div><div class="write-line"></div><div class="write-line"></div><div class="write-line"></div><div class="write-line"></div></div>
+  </div>
+</div>
+
+<!-- DAY 11 -->
+
+<div class="day-card">
+  <div class="day-header">
+    <div class="day-number-block"><span class="day-label">Day</span><span class="day-num">11</span></div>
+    <div class="day-title-block"><div class="day-theme">Reprogramming</div><h2>Failure Is Data</h2></div>
+  </div>
+  <div class="day-concept">
+    <div class="block-label">Today's Concept</div>
+    <p>Every person who has ever built something significant has a long list of failures. The difference between people who succeed and people who don't is not talent or luck — it's how they interpret setbacks. A failure-averse mindset treats every L as evidence that you're not enough. A growth mindset treats every L as data — information about what to adjust, what to strengthen, what to try differently. Your failures didn't happen to you. They happened for you. Every single one was building something you needed.</p>
+  </div>
+  <div class="day-exercise">
+    <div class="block-label">Today's Exercise</div>
+    <p>Write down your three biggest failures or setbacks. For each one, answer: What did this teach me that I couldn't have learned any other way? What strength did it develop in me? How did it redirect me toward something better? Do this without self-pity. Just cold, clean analysis. Your failures are your most expensive education — extract every dollar of value from them.</p>
+  </div>
+  <div class="day-reflection">
+    <div class="block-label">Reflection Prompt</div>
+    <p>If my setbacks were all part of a deliberate plan to prepare me for where I'm going — what was being built in me?</p>
+    <div class="write-lines"><div class="write-line"></div><div class="write-line"></div><div class="write-line"></div><div class="write-line"></div><div class="write-line"></div><div class="write-line"></div></div>
+  </div>
+</div>
+
+<!-- DAY 12 -->
+
+<div class="day-card">
+  <div class="day-header">
+    <div class="day-number-block"><span class="day-label">Day</span><span class="day-num">12</span></div>
+    <div class="day-title-block"><div class="day-theme">Reprogramming</div><h2>Discipline Is Self-Love</h2></div>
+  </div>
+  <div class="day-concept">
+    <div class="block-label">Today's Concept</div>
+    <p>Most people think discipline is about willpower — forcing yourself to do things you don't want to do. That model breaks down because it's built on resistance. Real discipline is a form of self-respect. It's the act of keeping the promises you make to yourself. Every time you follow through on a commitment to yourself — however small — you build trust in yourself. Every time you break it, you erode it. The most important relationship you will ever have is the one with yourself. Discipline is how you honor that relationship.</p>
+  </div>
+  <div class="day-exercise">
+    <div class="block-label">Today's Exercise</div>
+    <p>Make a list of 3 small promises you will keep to yourself today. Not tomorrow — today. They should be achievable but not easy. Write them down, do them, then come back and check them off. This is how you start rebuilding self-trust if it's been damaged. One kept promise at a time.</p>
+  </div>
+  <div class="day-reflection">
+    <div class="block-label">Reflection Prompt</div>
+    <p>Where in my life have I been breaking promises to myself — and what has that cost me?</p>
+    <div class="write-lines"><div class="write-line"></div><div class="write-line"></div><div class="write-line"></div><div class="write-line"></div><div class="write-line"></div><div class="write-line"></div></div>
+  </div>
+</div>
+
+<!-- DAY 13 -->
+
+<div class="day-card">
+  <div class="day-header">
+    <div class="day-number-block"><span class="day-label">Day</span><span class="day-num">13</span></div>
+    <div class="day-title-block"><div class="day-theme">Reprogramming</div><h2>Protect Your Vision</h2></div>
+  </div>
+  <div class="day-concept">
+    <div class="block-label">Today's Concept</div>
+    <p>Not everyone deserves access to your dreams. Some people — even people who love you — will project their own fear and limitations onto your vision. They're not doing it maliciously. They genuinely can't see what you see. But if you share your unformed vision with the wrong person at the wrong time, their doubt can plant a seed of doubt in you. Guard your vision like it's sacred. Share it selectively. Build it in the dark until it's strong enough to withstand the light.</p>
+  </div>
+  <div class="day-exercise">
+    <div class="block-label">Today's Exercise</div>
+    <p>Write your full vision for your life — not just your 30-day goal, but the whole picture. Where are you in 3 years? 5 years? What have you built? Who are you serving? What does your daily life feel like? Write it in present tense as if it's already happened. Be specific. Be bold. This is your sacred document. You don't have to share it with anyone.</p>
+  </div>
+  <div class="day-reflection">
+    <div class="block-label">Reflection Prompt</div>
+    <p>Who in my life truly sees my vision and believes in it — and how do I show up for them the way they show up for me?</p>
+    <div class="write-lines"><div class="write-line"></div><div class="write-line"></div><div class="write-line"></div><div class="write-line"></div><div class="write-line"></div><div class="write-line"></div></div>
+  </div>
+</div>
+
+<!-- DAY 14 -->
+
+<div class="day-card milestone">
+  <div class="day-header">
+    <div class="day-number-block"><span class="day-label">Day</span><span class="day-num">14</span></div>
+    <div class="day-title-block"><div class="day-theme">Affirmation Begins · Week 2 Milestone</div><h2>Layer One: The Affirmation</h2></div>
+  </div>
+  <div class="day-concept">
+    <div class="block-label">Today's Concept</div>
+    <p>Starting today, affirmation layering begins. This is a supercharged affirmation method that goes beyond simply repeating words. The method works in three layers: you say the affirmation, you feel it in your body, and you see the evidence of it being true. All three simultaneously. This is not positive thinking. This is deliberate neural reprogramming. From Day 14 onward, you will practice this method every morning alongside your visualization. The combination is exponentially more powerful than either alone.</p>
+  </div>
+  <div class="day-exercise">
+    <div class="block-label">Today's Exercise — Affirmation Layering Method</div>
+    <p>Take the 5 identity statements from Day 9. Read each one aloud. As you say it, place your hand on your chest and feel it as already true. Then recall one moment from your past that proves this statement is already part of you. Layer the memory onto the affirmation. Do this for each statement. This is your daily practice from here to Day 30.</p>
+  </div>
+  <div class="day-reflection">
+    <div class="block-label">Reflection Prompt</div>
+    <p>Halfway through the first two weeks — what has genuinely shifted in how I see myself, and what am I still resisting?</p>
+    <div class="write-lines"><div class="write-line"></div><div class="write-line"></div><div class="write-line"></div><div class="write-line"></div><div class="write-line"></div><div class="write-line"></div></div>
+  </div>
+</div>
+
+<div class="page-break"></div>
+
+<!-- WEEK 3 -->
+
+<div class="week-header" data-week="3">
+  <div class="week-tag">Week Three · Days 15–21</div>
+  <h2 class="week-title">Acceleration</h2>
+  <p class="week-desc">The new wiring is forming. Week 3 is about momentum — building on what's been laid and introducing the most advanced tool in this challenge: auto-hypnosis. This is where things start to feel different.</p>
+</div>
+
+<!-- DAYS 15-21 condensed for space but fully written -->
+
+<div class="day-card">
+  <div class="day-header">
+    <div class="day-number-block"><span class="day-label">Day</span><span class="day-num">15</span></div>
+    <div class="day-title-block"><div class="day-theme">Acceleration</div><h2>Momentum Is Real</h2></div>
+  </div>
+  <div class="day-concept">
+    <div class="block-label">Today's Concept</div>
+    <p>Newton's first law applies to human beings too. An object in motion stays in motion. The hardest part of any transformation is the beginning — breaking the inertia of your old patterns. But once you're moving, momentum does some of the work for you. You've been moving for 14 days. You're feeling it. The key now is to not stop. One missed day is fine. Two is dangerous. Three and you're fighting inertia again. Protect your streak fiercely.</p>
+  </div>
+  <div class="day-exercise">
+    <div class="block-label">Today's Exercise</div>
+    <p>Write down three things that have already started to change — in your thinking, your behavior, or your circumstances — since Day 1. They may be small. Write them anyway. Then write the three actions you will take today that are directly aligned with your goal. Not tomorrow. Today.</p>
+  </div>
+  <div class="day-reflection">
+    <div class="block-label">Reflection Prompt</div>
+    <p>What does the version of me who finishes all 30 days do on the days they don't feel like it?</p>
+    <div class="write-lines"><div class="write-line"></div><div class="write-line"></div><div class="write-line"></div><div class="write-line"></div><div class="write-line"></div><div class="write-line"></div></div>
+  </div>
+</div>
+
+<div class="day-card">
+  <div class="day-header">
+    <div class="day-number-block"><span class="day-label">Day</span><span class="day-num">16</span></div>
+    <div class="day-title-block"><div class="day-theme">Acceleration</div><h2>The Language You Use</h2></div>
+  </div>
+  <div class="day-concept">
+    <div class="block-label">Today's Concept</div>
+    <p>Language is not just communication — it's programming. The words you use consistently shape your reality. "I have to" versus "I get to." "I'm trying" versus "I'm doing." "I can't afford it" versus "How do I create it?" Every phrase you habitually use is either expanding or contracting your world. Today you audit your language and begin to upgrade it deliberately. Small shifts in language create massive shifts in mindset over time.</p>
+  </div>
+  <div class="day-exercise">
+    <div class="block-label">Today's Exercise</div>
+    <p>List 5 phrases you use regularly that carry a limiting frame. Then rewrite each one with empowering language. Practice the new phrases out loud until they feel natural. For the next 24 hours, catch yourself every time you use limiting language and replace it in real time — even mid-sentence.</p>
+  </div>
+  <div class="day-reflection">
+    <div class="block-label">Reflection Prompt</div>
+    <p>How has the way I talk about myself been creating a ceiling on what's possible for me?</p>
+    <div class="write-lines"><div class="write-line"></div><div class="write-line"></div><div class="write-line"></div><div class="write-line"></div><div class="write-line"></div><div class="write-line"></div></div>
+  </div>
+</div>
+
+<div class="day-card">
+  <div class="day-header">
+    <div class="day-number-block"><span class="day-label">Day</span><span class="day-num">17</span></div>
+    <div class="day-title-block"><div class="day-theme">Acceleration</div><h2>Fear Is a Compass</h2></div>
+  </div>
+  <div class="day-concept">
+    <div class="block-label">Today's Concept</div>
+    <p>Most people run from fear. High performers run toward it — not recklessly, but deliberately. Fear almost always points directly at the thing you most need to do. The presentation you're avoiding. The call you're not making. The conversation you keep postponing. Your fear is not a stop sign. It's a compass pointing at your next level. The size of your fear is usually proportional to the size of the opportunity on the other side of it.</p>
+  </div>
+  <div class="day-exercise">
+    <div class="block-label">Today's Exercise</div>
+    <p>Write down the one thing you have been avoiding that you know — deep down — you need to do. Why are you afraid of it? Write the fear out fully. Then write what happens if you do it anyway. Then write what happens if you keep avoiding it for another year. Make the cost of avoidance real. Then go do the thing today. Or take the first step toward it today.</p>
+  </div>
+  <div class="day-reflection">
+    <div class="block-label">Reflection Prompt</div>
+    <p>What is my fear of failure actually protecting me from — and is that protection costing me more than the risk?</p>
+    <div class="write-lines"><div class="write-line"></div><div class="write-line"></div><div class="write-line"></div><div class="write-line"></div><div class="write-line"></div><div class="write-line"></div></div>
+  </div>
+</div>
+
+<div class="day-card">
+  <div class="day-header">
+    <div class="day-number-block"><span class="day-label">Day</span><span class="day-num">18</span></div>
+    <div class="day-title-block"><div class="day-theme">Acceleration</div><h2>Serving Others</h2></div>
+  </div>
+  <div class="day-concept">
+    <div class="block-label">Today's Concept</div>
+    <p>The fastest way to shift your own energy is to genuinely serve someone else. Not to perform generosity — to actually give. Your attention, your time, your knowledge, your encouragement. When you're stuck in your own head — anxious, doubtful, stuck — service pulls you out of it instantly. The highest-performing people in every field understand that their success is not about them. It's about what they can give. Ironically, this orientation produces more success than self-focused striving ever does.</p>
+  </div>
+  <div class="day-exercise">
+    <div class="block-label">Today's Exercise</div>
+    <p>Do one genuine act of service today with no expectation of return. It can be small — a message to someone who needs to hear from you, helping someone with something, sharing knowledge freely. Then notice how it shifts your own energy. Write about that shift here. This is not coincidence. This is physics.</p>
+  </div>
+  <div class="day-reflection">
+    <div class="block-label">Reflection Prompt</div>
+    <p>Who am I ultimately building this for — and how does that person drive me forward on the hard days?</p>
+    <div class="write-lines"><div class="write-line"></div><div class="write-line"></div><div class="write-line"></div><div class="write-line"></div><div class="write-line"></div><div class="write-line"></div></div>
+  </div>
+</div>
+
+<div class="day-card">
+  <div class="day-header">
+    <div class="day-number-block"><span class="day-label">Day</span><span class="day-num">19</span></div>
+    <div class="day-title-block"><div class="day-theme">Acceleration</div><h2>The Body Keeps Score</h2></div>
+  </div>
+  <div class="day-concept">
+    <div class="block-label">Today's Concept</div>
+    <p>Mindset work that ignores the body is incomplete. Your physiology and your psychology are in constant dialogue. How you breathe, how you move, how you hold your posture — all of it feeds back into your mental state. You cannot think your way to high performance while your body is broadcasting low-energy signals. Movement is medicine. Sleep is programming. Breath is the remote control for your nervous system. Take care of the vessel.</p>
+  </div>
+  <div class="day-exercise">
+    <div class="block-label">Today's Exercise</div>
+    <p>Do the power pose: stand tall, feet shoulder-width apart, hands on hips or arms raised, chin up. Hold it for 2 minutes. Research shows this posture shifts hormone levels — increasing testosterone and decreasing cortisol — within minutes. Then take 10 deep belly breaths. Notice what shifts in your state. Write it down. Your body is a tool for mindset. Start using it that way.</p>
+  </div>
+  <div class="day-reflection">
+    <div class="block-label">Reflection Prompt</div>
+    <p>How am I treating my body — and does that treatment reflect the level of respect I have for the mission I'm on?</p>
+    <div class="write-lines"><div class="write-line"></div><div class="write-line"></div><div class="write-line"></div><div class="write-line"></div><div class="write-line"></div><div class="write-line"></div></div>
+  </div>
+</div>
+
+<div class="day-card">
+  <div class="day-header">
+    <div class="day-number-block"><span class="day-label">Day</span><span class="day-num">20</span></div>
+    <div class="day-title-block"><div class="day-theme">Acceleration</div><h2>The Mid-Point Mirror</h2></div>
+  </div>
+  <div class="day-concept">
+    <div class="block-label">Today's Concept</div>
+    <p>You are two-thirds of the way through. Stop and look in the mirror — not the bathroom mirror, the internal one. Who were you on Day 1? Who are you today? What has actually changed? Not what should have changed. Not what you wish had changed. What has actually, measurably shifted in how you think, speak, move, and make decisions? Honest self-assessment is not self-criticism. It is the GPS recalculating so you arrive at the destination.</p>
+  </div>
+  <div class="day-exercise">
+    <div class="block-label">Today's Exercise</div>
+    <p>Write an honest assessment of your progress. Grade yourself from 1–10 on: showing up daily, visualization practice, affirmation layering, taking aligned action toward your goal, managing your energy and environment. For anything below a 7, write one specific adjustment you will make in the final 10 days. No self-punishment. Just recalibration.</p>
+  </div>
+  <div class="day-reflection">
+    <div class="block-label">Reflection Prompt</div>
+    <p>What do I need to fully commit to in the last 10 days to make this challenge worth every minute I've invested?</p>
+    <div class="write-lines"><div class="write-line"></div><div class="write-line"></div><div class="write-line"></div><div class="write-line"></div><div class="write-line"></div><div class="write-line"></div></div>
+  </div>
+</div>
+
+<!-- DAY 21 -->
+
+<div class="day-card milestone">
+  <div class="day-header">
+    <div class="day-number-block"><span class="day-label">Day</span><span class="day-num">21</span></div>
+    <div class="day-title-block"><div class="day-theme">Auto-Hypnosis Begins · Week 3 Milestone</div><h2>The Deepest Level</h2></div>
+  </div>
+  <div class="day-concept">
+    <div class="block-label">Today's Concept</div>
+    <p>Auto-hypnosis is not mystical — it is a science-backed technique for accessing the subconscious mind directly. Your subconscious is where 95% of your behavior originates. Affirmations work on the conscious mind. Auto-hypnosis goes deeper. The technique is simple: you bring yourself to the threshold of sleep — fully relaxed, deeply calm — and in that state you feed your subconscious the vision and identity statements you've been building. In this state, the critical mind is bypassed and the programming lands directly. This is the most powerful tool in the challenge.</p>
+  </div>
+  <div class="day-exercise">
+    <div class="block-label">Today's Exercise — Auto-Hypnosis Introduction</div>
+    <p>Tonight, as you get into bed, do this: close your eyes, take 10 slow deep breaths, relax every muscle from your feet to your face. When you feel deeply relaxed — heavy, warm, drifting — begin to replay your visualization from Day 5 in full detail. Then slowly repeat your Day 9 identity statements. Don't force anything. Let them drift through your mind like music. Fall asleep in this state. Do this every night from Day 21 to Day 30.</p>
+  </div>
+  <div class="day-reflection">
+    <div class="block-label">Reflection Prompt</div>
+    <p>What do I want my subconscious mind to be working on while I sleep — and am I feeding it that, or am I feeding it fear and doubt?</p>
+    <div class="write-lines"><div class="write-line"></div><div class="write-line"></div><div class="write-line"></div><div class="write-line"></div><div class="write-line"></div><div class="write-line"></div></div>
+  </div>
+</div>
+
+<div class="page-break"></div>
+
+<!-- WEEK 4 -->
+
+<div class="week-header" data-week="4">
+  <div class="week-tag">Week Four · Days 22–30</div>
+  <h2 class="week-title">Integration</h2>
+  <p class="week-desc">The final week is not the end. It's the beginning of the rest of your life operating from a new foundation. Week 4 locks in everything you've built and prepares you to carry this beyond 30 days.</p>
+</div>
+
+<div class="day-card">
+  <div class="day-header">
+    <div class="day-number-block"><span class="day-label">Day</span><span class="day-num">22</span></div>
+    <div class="day-title-block"><div class="day-theme">Integration</div><h2>You Are Not the Same Person</h2></div>
+  </div>
+  <div class="day-concept">
+    <div class="block-label">Today's Concept</div>
+    <p>Three weeks ago you started this. The person reading this page today is not the same person who opened this workbook on Day 1. The changes may be subtle. They may be profound. But they are real. New neural pathways have been forming. Old beliefs have been examined and loosened. A new identity has been planted and is taking root. Don't dismiss what's happening because it doesn't feel dramatic enough. Transformation is mostly invisible until it isn't. Trust the process.</p>
+  </div>
+  <div class="day-exercise">
+    <div class="block-label">Today's Exercise</div>
+    <p>Write a letter from the person you are on Day 22 to the person you were on Day 1. What do you want them to know? What would you tell them about what's coming? What has surprised you most about this journey? Be generous with yourself. Be honest. This letter is evidence of your growth.</p>
+  </div>
+  <div class="day-reflection">
+    <div class="block-label">Reflection Prompt</div>
+    <p>What belief has been the most transformed over these 22 days — and what became possible the moment that shift happened?</p>
+    <div class="write-lines"><div class="write-line"></div><div class="write-line"></div><div class="write-line"></div><div class="write-line"></div><div class="write-line"></div><div class="write-line"></div></div>
+  </div>
+</div>
+
+<div class="day-card">
+  <div class="day-header">
+    <div class="day-number-block"><span class="day-label">Day</span><span class="day-num">23</span></div>
+    <div class="day-title-block"><div class="day-theme">Integration</div><h2>Purpose Is the Engine</h2></div>
+  </div>
+  <div class="day-concept">
+    <div class="block-label">Today's Concept</div>
+    <p>Goals are destinations. Purpose is the engine. A goal gives you something to aim at. Purpose gives you the fuel to keep going when every reason to stop seems legitimate. The people who sustain transformation long-term are not the most talented or the most disciplined — they are the most clear on why they're doing it. Not the surface why. The deep why. The why that connects to something bigger than their own comfort and convenience. Know your purpose. Return to it daily.</p>
+  </div>
+  <div class="day-exercise">
+    <div class="block-label">Today's Exercise</div>
+    <p>Write your purpose statement. Not your goal. Your purpose. Why are you building what you're building? Who does your success serve beyond yourself? What does the world look like when you're operating at your full potential? Write it in one powerful paragraph. Then read it every morning for the rest of this challenge and beyond.</p>
+  </div>
+  <div class="day-reflection">
+    <div class="block-label">Reflection Prompt</div>
+    <p>On the days when nothing is working and I want to quit — what is the one thing that will always pull me back?</p>
+    <div class="write-lines"><div class="write-line"></div><div class="write-line"></div><div class="write-line"></div><div class="write-line"></div><div class="write-line"></div><div class="write-line"></div></div>
+  </div>
+</div>
+
+<div class="day-card">
+  <div class="day-header">
+    <div class="day-number-block"><span class="day-label">Day</span><span class="day-num">24</span></div>
+    <div class="day-title-block"><div class="day-theme">Integration</div><h2>Gratitude as a Daily Practice</h2></div>
+  </div>
+  <div class="day-concept">
+    <div class="block-label">Today's Concept</div>
+    <p>Gratitude is not a feeling that arises when things go well. It is a discipline that creates the conditions for things to go well. Research consistently shows that people who practice daily gratitude have higher levels of positive emotion, better sleep, more compassion, and stronger immune systems. Gratitude literally rewires the brain toward optimism and abundance. But it only works when it's specific, felt, and consistent. Gratitude as a habit — not an occasional feeling — is one of the highest leverage practices you can build.</p>
+  </div>
+  <div class="day-exercise">
+    <div class="block-label">Today's Exercise</div>
+    <p>Write 5 things you are grateful for specifically because of something difficult you've been through. Not despite the difficulty — because of it. This is advanced gratitude. Finding the gift in the fire. This practice alone, done consistently, will transform how you relate to adversity for the rest of your life.</p>
+  </div>
+  <div class="day-reflection">
+    <div class="block-label">Reflection Prompt</div>
+    <p>What am I currently taking for granted that, if I lost it tomorrow, I would immediately recognize as a miracle?</p>
+    <div class="write-lines"><div class="write-line"></div><div class="write-line"></div><div class="write-line"></div><div class="write-line"></div><div class="write-line"></div><div class="write-line"></div></div>
+  </div>
+</div>
+
+<div class="day-card">
+  <div class="day-header">
+    <div class="day-number-block"><span class="day-label">Day</span><span class="day-num">25</span></div>
+    <div class="day-title-block"><div class="day-theme">Integration</div><h2>The Compound Effect</h2></div>
+  </div>
+  <div class="day-concept">
+    <div class="block-label">Today's Concept</div>
+    <p>Nothing dramatic has probably happened to you in the last 25 days. That is exactly how it's supposed to work. Transformation is compound interest — small, consistent deposits that seem insignificant until suddenly they aren't. The person who reads for 30 minutes a day doesn't feel smarter after one week. After one year, they have read 15–20 books more than the person who didn't. The daily visualization, the affirmations, the auto-hypnosis — these are not producing results you can see yet. They are producing results you will see. Trust the math.</p>
+  </div>
+  <div class="day-exercise">
+    <div class="block-label">Today's Exercise</div>
+    <p>Project your current daily practices forward 90 days. If you kept doing everything you've been doing in this challenge — visualization, affirmations, auto-hypnosis, aligned action — what would your life look like in 90 days? Write it out in detail. Now ask: is that future worth the 15 minutes a day it requires? Write your answer honestly.</p>
+  </div>
+  <div class="day-reflection">
+    <div class="block-label">Reflection Prompt</div>
+    <p>What daily practice has made the most difference in these 25 days — and how do I ensure I never stop doing it?</p>
+    <div class="write-lines"><div class="write-line"></div><div class="write-line"></div><div class="write-line"></div><div class="write-line"></div><div class="write-line"></div><div class="write-line"></div></div>
+  </div>
+</div>
+
+<div class="day-card">
+  <div class="day-header">
+    <div class="day-number-block"><span class="day-label">Day</span><span class="day-num">26</span></div>
+    <div class="day-title-block"><div class="day-theme">Integration</div><h2>Who You Are When No One Is Watching</h2></div>
+  </div>
+  <div class="day-concept">
+    <div class="block-label">Today's Concept</div>
+    <p>Character is what you do when no one is watching. Mindset is who you are when nothing is working. Anyone can show up with good energy when things are going well. The real test is who you are in the difficult moments — alone, tired, behind, doubting. The practices you've been building in this challenge are specifically designed to make your best self more accessible in those hard moments. Not perfect. Just more consistent. Just more you at your best, more of the time.</p>
+  </div>
+  <div class="day-exercise">
+    <div class="block-label">Today's Exercise</div>
+    <p>Think of a recent moment when you were at your worst — reactive, doubtful, small. Without judgment, walk through it: what triggered you, what story you told yourself, what you did. Now reimagine it: how would the person you're becoming on Day 30 have handled that same moment? Write both versions. Practice the second one in your mind until it feels natural.</p>
+  </div>
+  <div class="day-reflection">
+    <div class="block-label">Reflection Prompt</div>
+    <p>What is the truest, most powerful version of me — and what does it feel like when I'm living from that place?</p>
+    <div class="write-lines"><div class="write-line"></div><div class="write-line"></div><div class="write-line"></div><div class="write-line"></div><div class="write-line"></div><div class="write-line"></div></div>
+  </div>
+</div>
+
+<div class="day-card">
+  <div class="day-header">
+    <div class="day-number-block"><span class="day-label">Day</span><span class="day-num">27</span></div>
+    <div class="day-title-block"><div class="day-theme">Integration</div><h2>Forgiveness Is Power</h2></div>
+  </div>
+  <div class="day-concept">
+    <div class="block-label">Today's Concept</div>
+    <p>Unforgiveness is carrying someone else's weight in your body. Every person you haven't forgiven is taking up space in your mind, draining energy that belongs to your future. Forgiveness is not saying what happened was okay. It is not reconciliation. It is the decision to stop letting the past determine the present. Forgiveness is one of the highest acts of self-love. It frees you — not them. The heaviest thing you will ever put down is a grudge you've been carrying for years.</p>
+  </div>
+  <div class="day-exercise">
+    <div class="block-label">Today's Exercise</div>
+    <p>Write the name of one person — or one version of yourself — you have not fully forgiven. Write what happened. Write how carrying it has cost you. Then write: "I choose to release this. Not for them. For me." You don't have to feel it fully right away. The decision comes first. The feeling follows. This is one of the most powerful things you will do in these 30 days.</p>
+  </div>
+  <div class="day-reflection">
+    <div class="block-label">Reflection Prompt</div>
+    <p>What would become available to me — in energy, clarity, and forward momentum — if I fully released what I'm holding?</p>
+    <div class="write-lines"><div class="write-line"></div><div class="write-line"></div><div class="write-line"></div><div class="write-line"></div><div class="write-line"></div><div class="write-line"></div></div>
+  </div>
+</div>
+
+<div class="day-card">
+  <div class="day-header">
+    <div class="day-number-block"><span class="day-label">Day</span><span class="day-num">28</span></div>
+    <div class="day-title-block"><div class="day-theme">Integration</div><h2>Beyond 30 Days</h2></div>
+  </div>
+  <div class="day-concept">
+    <div class="block-label">Today's Concept</div>
+    <p>Two days left. The question is not whether you finish — you will. The question is what happens on Day 31. Most people complete a challenge and slowly drift back toward their old patterns. Not because they failed, but because they didn't build the bridge. Today you design what comes next. The practices you've built here are not a 30-day program. They are a life operating system. Visualization, affirmations, auto-hypnosis, aligned action, gratitude, purpose. These are the tools. Keep using them.</p>
+  </div>
+  <div class="day-exercise">
+    <div class="block-label">Today's Exercise</div>
+    <p>Design your daily mindset practice for Day 31 and beyond. Keep it simple enough to do on your worst day. What are the non-negotiables? Write them as a morning routine — 15 minutes maximum. Then schedule it. Put it in your calendar. Treat it like a meeting with the most important person in your life. Because it is.</p>
+  </div>
+  <div class="day-reflection">
+    <div class="block-label">Reflection Prompt</div>
+    <p>What does my life look like in one year if I keep doing what I've been doing in this challenge every single day?</p>
+    <div class="write-lines"><div class="write-line"></div><div class="write-line"></div><div class="write-line"></div><div class="write-line"></div><div class="write-line"></div><div class="write-line"></div></div>
+  </div>
+</div>
+
+<div class="day-card">
+  <div class="day-header">
+    <div class="day-number-block"><span class="day-label">Day</span><span class="day-num">29</span></div>
+    <div class="day-title-block"><div class="day-theme">Integration</div><h2>Action Is the Proof</h2></div>
+  </div>
+  <div class="day-concept">
+    <div class="block-label">Today's Concept</div>
+    <p>A growth mindset can only help you if you take action. Everything in this workbook — the concepts, the exercises, the visualizations — is preparation for action. The shift in mindset is real. But mindset without movement is just a very peaceful way to stay stuck. The world does not reward beliefs. It rewards decisions followed by action followed by adjustment followed by more action. You now have the mindset. The only question left is: what are you going to do with it?</p>
+  </div>
+  <div class="day-exercise">
+    <div class="block-label">Today's Exercise</div>
+    <p>Write the three boldest actions you have been avoiding that are directly connected to your goal. Not the comfortable next steps — the ones that scare you. Rank them. Commit to taking the first one within 48 hours of completing this challenge. Write the date you will do it. Sign your name. This is your contract with yourself.</p>
+  </div>
+  <div class="day-reflection">
+    <div class="block-label">Reflection Prompt</div>
+    <p>What is the one action I keep circling around that I know — if I just did it — would change everything?</p>
+    <div class="write-lines"><div class="write-line"></div><div class="write-line"></div><div class="write-line"></div><div class="write-line"></div><div class="write-line"></div><div class="write-line"></div></div>
+  </div>
+</div>
+
+<!-- DAY 30 -->
+
+<div class="day-card milestone">
+  <div class="day-header">
+    <div class="day-number-block"><span class="day-label">Day</span><span class="day-num">30</span></div>
+    <div class="day-title-block"><div class="day-theme">The Suddenly</div><h2>You Made It</h2></div>
+  </div>
+  <div class="day-concept">
+    <div class="block-label">Today's Concept</div>
+    <p>There's a moment in every transformation that feels sudden — like everything clicked at once. But it was never sudden. It was the accumulated weight of every day you showed up when you didn't feel like it. Every affirmation you said when you weren't sure you believed it. Every visualization you did when your circumstances told a different story. Today is your suddenly. Not because everything is fixed. But because you are different. And a different you will create a different life. That process has already begun. You are not at the end. You are at the beginning — of the rest of it.</p>
+  </div>
+  <div class="day-exercise">
+    <div class="block-label">Final Exercise — Your Testimony</div>
+    <p>Write your testimony from this challenge. What shifted? What surprised you? What do you know now that you didn't know 30 days ago? Write it as if you're sharing it with someone who needs to hear it — someone who is standing at Day 1 wondering if it's worth it. Tell them the truth. Then share it. In the group, with a friend, on social media — wherever feels right. Your story has power. Use it.</p>
+  </div>
+  <div class="day-reflection">
+    <div class="block-label">Final Reflection</div>
+    <p>Who am I on Day 30 — and what does that person do next?</p>
+    <div class="write-lines">
+      <div class="write-line"></div><div class="write-line"></div><div class="write-line"></div>
+      <div class="write-line"></div><div class="write-line"></div><div class="write-line"></div>
+      <div class="write-line"></div><div class="write-line"></div><div class="write-line"></div>
+      <div class="write-line"></div><div class="write-line"></div><div class="write-line"></div>
+    </div>
+  </div>
+</div>
+
+<div class="page-break"></div>
+
+<!-- BACK COVER -->
+
+<div class="back-cover">
+  <div class="back-cover-content">
+    <h2>"YOU are the gift you've been<br><span>waiting for</span><br>this entire time."</h2>
+    <p>Join the community. Share your testimony. Connect with others on the same journey.</p>
+    <div class="back-cover-url">30daymindset.com</div>
+  </div>
+</div>
+
+</body>
+</html>
